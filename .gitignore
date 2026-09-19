@@ -1,0 +1,8 @@
+# ROM original: solo se usa localmente para extraer recursos y no forma parte de la web.
+*.z64
+*.n64
+*.v64
+
+# Archivos temporales de previsualización.
+preview-*.png
+menu-reference.png
