@@ -17,3 +17,16 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;ba
 .result{text-align:center;padding-top:18px}.result-icon{font:normal clamp(4rem,9vw,7rem)/1 'Bowlby One SC',sans-serif;color:#ffe83a;text-shadow:3px 3px #fff2a0,6px 6px #806000}.result h2{margin:6px 0;font:normal clamp(2.6rem,5vw,4.1rem)/1 'Bowlby One SC',sans-serif;text-shadow:4px 4px #765600}.result p{margin:8px 0;font-size:1.8rem;text-shadow:2px 2px #765600}.result .menu-button{display:block;margin:22px auto 0}
 .mario-hand{position:fixed;z-index:9999;top:0;left:0;width:66px;height:90px;object-fit:contain;pointer-events:none;opacity:0;filter:drop-shadow(5px 6px 2px rgba(40,30,0,.45));transition:opacity .06s;will-change:transform}.mario-hand.visible{opacity:1}
 @media(max-width:760px){body,button,label,input{cursor:auto}.mario-hand{display:none}.screen{padding:22px 18px 30px;box-shadow:inset 0 0 0 8px #e7c83b,inset 0 0 0 12px #6f5708,inset 0 0 0 18px #d6ad1a}.hero{min-height:84px}.logo{gap:7px}.logo-letter{font-size:clamp(2rem,9vw,3.4rem)}.answers{grid-template-columns:1fr;gap:12px}.answer:nth-child(3):last-child{grid-column:auto;width:100%}.answer{grid-template-columns:104px 1fr;min-height:98px;gap:12px}.file-pic{width:104px}.choice{font-size:1.3rem}.slot{font-size:1.15rem}.actions{gap:10px;transform:scale(.9);transform-origin:top center}.hud{font-size:.95rem}#question-title{font-size:1.6rem}}
+
+/* Compacta la pantalla para que todo el quiz quepa sin scroll. */
+.screen{height:100vh;min-height:0;overflow:hidden;padding-top:14px;padding-bottom:12px}
+.hero{min-height:82px}
+.hud{margin-top:2px;margin-bottom:10px}
+#question-title{margin-bottom:12px}
+.question-image{width:min(300px,70%);margin-bottom:10px}
+.answers{gap:14px 44px}
+.answer{min-height:88px}
+.actions{min-height:86px;margin-top:2px}
+.menu-button{height:82px}
+.menu-button:before{height:62px}
+@media(max-width:760px){.screen{height:100dvh;overflow:hidden;padding-top:12px;padding-bottom:10px}.hero{min-height:64px}.hud{margin-bottom:7px}.question-image{width:min(250px,62%);margin-bottom:7px}.answers{gap:8px}.answer{min-height:72px}.actions{min-height:68px}.menu-button{height:64px}.menu-button:before{height:50px}}

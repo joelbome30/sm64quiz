@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Creador de preguntas - SM64 Quiz</title>
+  <link rel="stylesheet" href="creator.css">
+</head>
+<body>
+  <main class="creator">
+    <header class="creator-header">
+      <div>
+        <p class="eyebrow">SM64 QUIZ</p>
+        <h1>Creador de preguntas</h1>
+        <p>Diseña preguntas, marca la respuesta correcta y exporta todo en un solo JSON.</p>
+      </div>
+      <div class="header-actions">
+        <label class="button button-light" for="import-file">Importar JSON</label>
+        <input id="import-file" type="file" accept="application/json,.json" hidden>
+        <button id="download-button" class="button button-main" type="button">Descargar JSON</button>
+      </div>
+    </header>
+
+    <div id="message" class="message" role="status"></div>
+    <section id="question-list" class="question-list"></section>
+
+    <div class="bottom-actions">
+      <button id="add-button" class="button button-add" type="button">＋ Añadir pregunta</button>
+      <span id="question-count"></span>
+    </div>
+  </main>
+  <script src="creator.js"></script>
+</body>
+</html>
