@@ -30,3 +30,16 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;ba
 .menu-button{height:82px}
 .menu-button:before{height:62px}
 @media(max-width:760px){.screen{height:100dvh;overflow:hidden;padding-top:12px;padding-bottom:10px}.hero{min-height:64px}.hud{margin-bottom:7px}.question-image{width:min(250px,62%);margin-bottom:7px}.answers{gap:8px}.answer{min-height:72px}.actions{min-height:68px}.menu-button{height:64px}.menu-button:before{height:50px}}
+
+/* Las preguntas con imagen usan menos espacio para mantener CHECK visible. */
+.quiz.with-image .question-image{width:min(260px,58%);margin-bottom:8px}
+.quiz.with-image #question-title{margin-bottom:8px}
+.quiz.with-image .answers{gap:9px 44px}
+.quiz.with-image .answer{min-height:78px}
+.quiz.with-image .file-pic{width:100px}
+.quiz.with-image .actions{min-height:68px}
+@media(max-width:760px){.quiz.with-image .question-image{width:min(210px,54%)}.quiz.with-image .answer{min-height:64px}.quiz.with-image .file-pic{width:88px}}
+
+/* El control queda siempre visible, aunque una pregunta tenga imagen. */
+.actions{position:fixed;left:50%;bottom:18px;z-index:20;min-height:0;margin:0;transform:translateX(-50%);padding:6px 12px;border-radius:8px;background:rgba(150,115,0,.88)}
+@media(max-width:760px){.actions{bottom:8px;transform:translateX(-50%) scale(.9)}}

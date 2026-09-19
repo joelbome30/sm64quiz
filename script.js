@@ -49,6 +49,7 @@ function renderQuestion() {
   ui.score.textContent = `Puntaje: ${score}`;
   ui.progress.style.width = `${((questionNumber + 1) / questions.length) * 100}%`;
   ui.title.textContent = question.question;
+  ui.quiz.classList.toggle("with-image", Boolean(question.image));
   ui.feedback.textContent = "";
   ui.feedback.className = "feedback";
   ui.check.disabled = true;
