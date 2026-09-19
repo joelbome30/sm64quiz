@@ -1,65 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Quiz interactivo de cinco preguntas sobre Super Mario 64.">
-  <title>Quiz de Super Mario 64</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Quiz de Super Mario 64 inspirado en el menú File Select.">
+  <title>SM64 Quiz</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <img class="mario-hand" id="mario-hand" src="mario-hand.png" alt="" aria-hidden="true">
-  <main class="quiz-shell">
+  <img id="mario-hand" class="mario-hand" src="mario-hand.png" alt="" aria-hidden="true">
+
+  <main class="screen">
     <header class="hero">
-      <h1 id="screen-title" aria-label="Select Answer">
-        <span class="green">S</span><span class="pink">E</span><span class="yellow">L</span><span class="pink">E</span><span class="green">C</span><span class="pink">T</span>
-        <span class="pink">A</span><span class="yellow">N</span><span class="green">S</span><span class="pink">W</span><span class="yellow">E</span><span class="green">R</span>
-      </h1>
+      <h1 id="logo" class="logo" aria-label="Select Answer"></h1>
     </header>
 
-    <section class="quiz-card" id="quiz-card" aria-labelledby="question-title">
-      <div class="quiz-status" aria-label="Estado de la partida">
-        <p id="question-counter">Pregunta 1 de 5</p>
-        <p id="score-counter" aria-live="polite">Puntaje: 0</p>
-      </div>
+    <section class="hud" aria-label="Estado del quiz">
+      <span id="question-counter">Pregunta 1 de 10</span>
+      <span id="score-counter" aria-live="polite">Puntaje: 0</span>
+      <div class="progress"><div id="progress-bar"></div></div>
+    </section>
 
-      <div class="progress" aria-hidden="true">
-        <div class="progress__bar" id="progress-bar"></div>
-      </div>
-
+    <section class="quiz" aria-labelledby="question-title">
       <div id="quiz-content">
-        <div id="question-image-container" class="question-image-container" hidden>
+        <h2 id="question-title" tabindex="-1"></h2>
+        <div id="question-image-container" class="question-image" hidden>
           <img id="question-image" src="" alt="">
         </div>
-
-        <h2 id="question-title"></h2>
         <div id="answers" class="answers" role="radiogroup" aria-labelledby="question-title"></div>
-
         <p id="feedback" class="feedback" aria-live="polite"></p>
-
         <div class="actions">
-          <button id="check-button" class="button button--primary" type="button" disabled>
-            Comprobar respuesta
-          </button>
-          <button id="next-button" class="button button--secondary" type="button" hidden>
-            Siguiente pregunta <span aria-hidden="true">→</span>
-          </button>
+          <button id="check-button" class="menu-button score" type="button" disabled><span>CHECK</span></button>
+          <button id="next-button" class="menu-button copy" type="button" hidden><span id="next-label">NEXT</span></button>
         </div>
       </div>
 
       <div id="result" class="result" hidden aria-live="polite">
-        <div class="result__icon" id="result-icon" aria-hidden="true">★</div>
-        <p class="result__label">Resultado final</p>
-        <h2 id="result-title">¡Quiz completado!</h2>
-        <p id="result-score" class="result__score"></p>
+        <div id="result-icon" class="result-icon">★</div>
+        <h2 id="result-title">QUIZ COMPLETE</h2>
+        <p id="result-score"></p>
         <p id="result-message"></p>
-        <button id="restart-button" class="button button--primary" type="button">
-          Jugar de nuevo
-        </button>
+        <button id="restart-button" class="menu-button erase" type="button"><span>RETRY</span></button>
       </div>
     </section>
-
-    <footer id="footer-help">SELECT ANSWER</footer>
   </main>
 
   <script src="script.js"></script>
